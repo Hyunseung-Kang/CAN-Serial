@@ -43,6 +43,27 @@ CAN Bus 프로토콜은 다음과 같은 구조를 갖는다.
 
 
 
+# Compile과정
+##### 리눅스 환경에서 us단위로 Sleep을 걸어주기 위해 <unistd.h> 헤더를 include한다.
+##### 그리고 usleep(500000); 를 통해 0.5s를 sleep한다.(500,000us = 500ms)
+
+
+##### 다음으로는 서식을 지정하여 배열 형태로 문자열을 생성하는 과정이다.
+```
+char s1[20];
+sprintf(s1, "Hello, %s", "world!");
+printf("%s\n", s1);
+/// Hello, world!  출력
+```
+##### 위의 내용은 "Hello, %s"로 서식을 지정하여 s1에 저장하는 코드를 나타내었다.
+
+
+##### 마지막으로 Linux환경에서 c언어에서 <math.h>를 사용하여 컴파일하는 과정에서의 명령어를 나타내었다.
+```
+>> gcc -o "complied_file_name" "file_name.c" -lm
+```
+꼭 끝에 -lm 을 붙여서 컴파일하도록 하자.
+
 * CAN통신 개념
 https://www.fescaro.com/ko/archives/249
 
